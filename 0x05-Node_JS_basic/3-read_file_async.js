@@ -1,5 +1,3 @@
-//Counts the number of students in a csv file
-
 const fs = require('fs');
 
 const countStudents = (dataPath) => new Promise((resolve, reject) => {

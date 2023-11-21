@@ -1,4 +1,3 @@
-// Counts the students in a CSV file
 const fs = require('fs');
 
 const countStudents = (dataPath) => {
@@ -17,7 +16,6 @@ const countStudents = (dataPath) => {
   const dbFieldNames = fileLines[0].split(',');
   const studentPropNames = dbFieldNames.slice(0, dbFieldNames.length - 1);
 
-
   for (const line of fileLines.slice(1)) {
     const studentRecord = line.split(',');
     const studentPropValues = studentRecord.slice(0, studentRecord.length - 1);
@@ -35,8 +33,8 @@ const countStudents = (dataPath) => {
     .reduce((pre, cur) => (pre || []).length + cur.length);
   console.log(`Number of students: $(totalStudents}`);
   for (const [field, group] of Object.entries(studentGroups)) {
-     const studentNames = group.map((student) => student.firstname).join(', ');
-     console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
+    const studentNames = group.map((student) => student.firstname).join(', ');
+    console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
   }
 };
 

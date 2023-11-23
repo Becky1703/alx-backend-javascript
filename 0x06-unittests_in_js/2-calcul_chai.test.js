@@ -27,7 +27,7 @@ describe('calculateNumber', () => {
       expect(calculateNumber('SUM', 2.0, -2.0)).to.equal(0);
     });
 
-    it('should sum 0 and 0 and return 0 ', () => {
+    it('should sum 0 and 0 and return 0', () => {
       expect(calculateNumber('SUM', 0.0, 0.0)).to.equal(0);
     });
   });
@@ -87,11 +87,11 @@ describe('calculateNumber', () => {
       expect(calculateNumber('DIVIDE', -2.0, -2.0)).to.equal(1);
     });
 
-    it('should divide rounded up numbers', () => {
+    it('should divide a rounded up numbers', () => {
       expect(calculateNumber('DIVIDE', 2.6, 3.0)).to.equal(1);
     });
 
-    it('should divide rounded down numbers', () => {
+    it('should divide a rounded down numbers', () => {
       expect(calculateNumber('DIVIDE', 2.4, 2.0)).to.equal(1);
     });
 
